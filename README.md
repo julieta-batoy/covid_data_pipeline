@@ -35,7 +35,7 @@ This project sets up a data pipeline for ingesting, processing, storing, and ana
 
     **`Replace 'user' with the actual user name (e.g., user123)`**
     ```bash
-    psql -h localhost -U user -f scripts/setup_postgres.sql
+    psql -h localhost -U postgres -f scripts/setup_postgres.sql
 
 5. Modify the `.env` based on the setup no. 3 (Set up the PostgreSQL database):
     ```bash
