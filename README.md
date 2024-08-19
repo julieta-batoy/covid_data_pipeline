@@ -12,7 +12,6 @@ This project sets up a data pipeline for ingesting, processing, storing, and ana
 - **`scripts/setup_postgres.sql`**: SQL scripts for setting up the PostgreSQL database
 - **`sql_queries/analysis_queries.sql`**: SQL queries for data analysis
 - **`.env`**: Stores environment variables
-- **`.gitignore`**: Specifies files and directories that should be ignored by Git
 - **`README.md`**: Provides a comprehensive guide to the COVID-19 Data Pipeline project
 - **`requirements.txt`**: Lists the Python dependencies required by data pipeline
 
