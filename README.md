@@ -21,7 +21,7 @@ This project sets up a data pipeline for ingesting, processing, storing, and ana
     - Download: https://github.com/julieta-batoy/covid_data_pipeline/archive/refs/heads/main.zip
 
 2. Create a Python virtual environment and install dependencies:
-    ```bash
+    ```python
     python -m venv venv
     venv/bin/activate
     pip install -r requirements.txt
