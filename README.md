@@ -27,17 +27,17 @@ This project sets up a data pipeline for ingesting, processing, storing, and ana
     pip install -r requirements.txt
 
 3. Set up the PostgreSQL database:
-    ```bash
-    # Modify first the scripts/setup_postgres.sql
+    - Modify first the scripts/setup_postgres.sql
     
-    # Replace 'database_name' with the actual database name (e.g., staging_covid_db
-    # Replace 'user' and 'password' with the actual user name (e.g., user123) and password (e.g., 'pass123')
-    # Replace 'database_name' and 'user' with the actual database name (e.g., staging_covid_db) and (e.g., user123)
+    - Replace 'database_name' with the actual database name (e.g., staging_covid_db
+    - Replace 'user' and 'password' with the actual user name (e.g., user123) and password (e.g., 'pass123')
+    - Replace 'database_name' and 'user' with the actual database name (e.g., staging_covid_db) and (e.g., user123)
 
-    # Replace 'user' with the actual user name (e.g., user123)
+    **`Replace 'user' with the actual user name (e.g., user123)`**
+    ```bash
     psql -h localhost -U user -f scripts/setup_postgres.sql
 
-4. Modify the `.env` based on the setup no. 3 (Set up the PostgreSQL database):
+5. Modify the `.env` based on the setup no. 3 (Set up the PostgreSQL database):
     ```bash
     # "postgresql://" database type and protocol
     # "user:" username required to authenticate with the PostgreSQL database
@@ -48,11 +48,11 @@ This project sets up a data pipeline for ingesting, processing, storing, and ana
     
     STAGING_DB=postgresql://user:password@localhost:5432/database_name
 
-5. Run the Dagster pipeline to ingest the data:
+6. Run the Dagster pipeline to ingest the data:
     ```bash
     dagster job execute -f dags/covid_data_ingestion.py
 
-6. Modify the `dbt/profiles.yml` based on the database configuration:
+7. Modify the `dbt/profiles.yml` based on the database configuration:
     ```yaml
         # Example
     
@@ -73,12 +73,12 @@ This project sets up a data pipeline for ingesting, processing, storing, and ana
             sslmode: prefer
             search_path: public
 
-7. Use dbt to process the data:
+8. Use dbt to process the data:
     ```bash
     cd dbt
     dbt run
 
-8. Analyze the data using the provided SQL queries in `sql_queries/analysis_queries.sql`.
+9. Analyze the data using the provided SQL queries in `sql_queries/analysis_queries.sql`.
 
 ## Design Decisions
 - **Dagster** for orchestration due to its flexibility in managing complex workflows.
