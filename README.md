@@ -19,6 +19,7 @@ This project sets up a data pipeline for ingesting, processing, storing, and ana
 ## Setup Instructions
 1. Clone the repository:
     - Download: https://github.com/julieta-batoy/covid_data_pipeline/archive/refs/heads/main.zip
+    - Copy to your Workspace
 
 2. Create a Python virtual environment and install dependencies:
     ```python
@@ -48,11 +49,11 @@ This project sets up a data pipeline for ingesting, processing, storing, and ana
     
     STAGING_DB=postgresql://user:password@localhost:5432/database_name
 
-6. Run the Dagster pipeline to ingest the data:
+6. Run the Dagster pipeline to ingest the data:  
     ```bash
     dagster job execute -f dags/covid_data_ingestion.py
 
-7. Modify the `dbt/profiles.yml` based on the database configuration:
+8. Modify the `dbt/profiles.yml` based on the database configuration:
     ```yaml
         # Example
     
@@ -73,12 +74,12 @@ This project sets up a data pipeline for ingesting, processing, storing, and ana
             sslmode: prefer
             search_path: public
 
-8. Use dbt to process the data:
+9. Use dbt to process the data:
     ```bash
     cd dbt
     dbt run
 
-9. Analyze the data using the provided SQL queries in `sql_queries/analysis_queries.sql`.
+10. Analyze the data using the provided SQL queries in `sql_queries/analysis_queries.sql`.
 
 ## Design Decisions
 - **Dagster** for orchestration due to its flexibility in managing complex workflows.
