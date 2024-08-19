@@ -1,0 +1,20 @@
+# This file contains the connection configuration for dbt.
+# It specifies how dbt connects to your PostgreSQL database.
+# Each profile can have multiple environments (like dev, prod).
+
+default:
+  target: dev                 # The target environment (can be 'dev', 'prod', etc.)
+  outputs:
+    dev:                      
+      type: postgres          # The type of database; in this case, PostgreSQL
+      host: localhost         # The hostname of the PostgreSQL server
+      user: user              # Your PostgreSQL username
+      password: password      # Your PostgreSQL password
+      dbname: database_name   # The name of the database to connect to
+      schema: public
+      threads: 4
+      port: 5432              # The port on which PostgreSQL is running (default is 5432)
+      keepalives_idle: 0
+      connect_timeout: 10
+      sslmode: prefer
+      search_path: public

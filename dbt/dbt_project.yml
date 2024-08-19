@@ -1,0 +1,15 @@
+# This file configures the dbt project settings.
+# It defines paths for models, and other dbt resources.
+# It also specifies which profile to use for database connections.
+
+name: 'covid_data_pipeline'
+version: '1.0.0'
+
+profile: 'default'
+
+models:
+  covid_data_pipeline:
+    staging:
+      materialized: view
+    mart:
+      materialized: table
