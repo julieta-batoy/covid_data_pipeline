@@ -23,7 +23,7 @@ This project sets up a data pipeline for ingesting, processing, storing, and ana
 2. Create a Python virtual environment and install dependencies:
     ```python
     python -m venv venv
-    venv/bin/activate
+    venv\scripts\activate
     pip install -r requirements.txt
 
 3. Set up the PostgreSQL database:
