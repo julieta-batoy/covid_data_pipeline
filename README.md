@@ -18,9 +18,7 @@ This project sets up a data pipeline for ingesting, processing, storing, and ana
 
 ## Setup Instructions
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/your_username/covid_data_pipeline.git
-    cd covid_data_pipeline
+    - Download: https://github.com/julieta-batoy/covid_data_pipeline/archive/refs/heads/main.zip
 
 2. Create a Python virtual environment and install dependencies:
     ```bash
