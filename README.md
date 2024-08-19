@@ -28,10 +28,7 @@ This project sets up a data pipeline for ingesting, processing, storing, and ana
 
 3. Set up the PostgreSQL database:
     - Modify first the scripts/setup_postgres.sql
-    
-    - Replace 'database_name' with the actual database name (e.g., staging_covid_db
-    - Replace 'user' and 'password' with the actual user name (e.g., user123) and password (e.g., 'pass123')
-    - Replace 'database_name' and 'user' with the actual database name (e.g., staging_covid_db) and (e.g., user123)
+    - Replace `'database_name'`, `'user'`, and `'password'` with the actual database name `(e.g., staging_covid_db)`, user name `(e.g., user123)`, and password `(e.g., 'pass123')`
 
     **`Replace 'user' with the actual user name (e.g., user123)`**
     ```bash
